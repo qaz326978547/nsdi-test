@@ -1,0 +1,126 @@
+$red: #ff0000;
+$flag-width: 300px;
+$flag-hight: 200px;
+$circle-radius: calc(($flag-hight/5)*3);
+
+body {
+    overflow: hidden;
+}
+
+.flag-jp-1 {
+    aspect-ratio: 3 / 2;
+    width: $flag-width;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .circle {
+        width: $circle-radius;
+        height: $circle-radius;
+        background-color: $red;
+        border-radius: 50%;
+    }
+}
+
+.flag-jp-2 {
+    width: $flag-width;
+    height: $flag-hight;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: $circle-radius;
+        height: $circle-radius;
+        background-color: $red;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.flag-jp-3 {
+    width: $flag-width;
+    height: $flag-hight;
+    background-color: white;
+    position: relative;
+
+    .circle {
+        width: $circle-radius;
+        height: $circle-radius;
+        border-radius: 50%;
+        background-color: $red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+//Norway
+.wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 11 / 8;
+    background-color: #BA0C2F;
+    display: flex;
+}
+
+.flag-norway {
+    width: 100%;
+    aspect-ratio: 11 / 8;
+    display: flex;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.flag-norway-white {
+    width: 100%;
+    aspect-ratio: 11 / 8;
+    display: flex;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.blue-item {
+    width: 100%;
+    aspect-ratio: 11 / 8;
+    display: flex;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+
+
+.grow-white {
+    background-color: white;
+}
+
+.grow-blue {
+    background-color: #00205B;
+}
+
+.grow-1 {
+    flex-grow: 1;
+}
+
+.grow-2 {
+    flex-grow: 2;
+}
+
+.grow-6 {
+    flex-grow: 6;
+}
+
+.grow-12 {
+    flex-grow: 12;
+}
